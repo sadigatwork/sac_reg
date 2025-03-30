@@ -23,7 +23,7 @@ function UniversityDetails() {
   const onDeleteClick = (id) => {
     axios
       .delete(`http://localhost:8082/api/universities/${id}`)
-      .then((res) => {
+      .then(() => {
         navigate("/");
       })
       .catch((err) => {

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const CreateUniversity = (props) => {
+const CreateUniversity = () => {
   const navigate = useNavigate();
   const [university, setUniversity] = useState({
     university_name: "",
@@ -18,7 +18,7 @@ const CreateUniversity = (props) => {
     e.preventDefault();
     axios
       .post("http://localhost:8082/api/universities", university)
-      .then((res) => {
+      .then(() => {
         // console.log(res.data);
         setUniversity({
           university_name: "",
